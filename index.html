@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyndrDB Firestorm</title>
+  
+  <!-- Bootstrap 5.3.8 CSS -->
+  <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 (Latest Free Version) -->
+  <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+  
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/containers.css">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+  </style>
+</head>
+<body>
+ 
+
+  <div id="body-container" class="main-container">
+     <navigation-component></navigation-component>
+     <div class="content-wrapper">
+       <content-container></content-container>
+       <agent-info-container></agent-info-container>
+     </div>
+     <bottom-container></bottom-container>
+      <test-config-modal></test-config-modal>
+  </div>
+
+  <!-- Bootstrap 5.3.8 JS Bundle -->
+  <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+  
+  <!-- Main entry point (Vite will bundle this) -->
+  <script type="module" src="/src/main.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+// VANTA.FOG({
+//   el: "#body-container",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.00,
+//   minWidth: 200.00,
+//   highlightColor: 0xef00ff,
+//   midtoneColor: 0x250703,
+//   baseColor: 0x160101,
+//   blurFactor: 0.78,
+//   speed: 0.00,
+//   zoom: 0.20
+// })
+
+// VANTA.WAVES({
+//   el: "#body-container",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.00,
+//   minWidth: 200.00,
+//   scale: 1.00,
+//   scaleMobile: 1.00,
+//   color: 0x700088,
+//   shininess: 40.00
+// })
+
+VANTA.NET({
+  el: "#body-container",
+  mouseControls: false,
+  touchControls: false,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xff3fff,
+  maxDistance: 27.00
+})
+</script>
+</body>
+</html>
